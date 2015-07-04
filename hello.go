@@ -8,6 +8,7 @@ func main() {
 // var [name] [type] = value
 // s: value
 	var arr [5]int =  [5]int{1,2,3,4}
-	// first letter uppercase meaning public var
-	fmt.Println(len(arr))
+	for i :=0;i<len(arr);i++ {
+		fmt.Println(arr[i])
+	}
 }
