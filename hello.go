@@ -8,7 +8,9 @@ func main() {
 // var [name] [type] = value
 // s: value
 	var arr [5]int =  [5]int{1,2,3,4}
-	for i :=0;i<len(arr);i++ {
+	i := 0
+	for i < len(arr) {
 		fmt.Println(arr[i])
+		i++
 	}
 }
