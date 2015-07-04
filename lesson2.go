@@ -3,7 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	var n*int = new(int)
+	var a int = 0
+	var n*int = &a
 	*n = 1
-	fmt.Println(*n)
+	fmt.Println(a)
 }
