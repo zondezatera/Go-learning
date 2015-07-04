@@ -1,6 +1,6 @@
 package main
 
-import(
+import (
 	"contact"
 	"encoding/json"
 	"fmt"
@@ -8,13 +8,19 @@ import(
 )
 
 func main() {
-	http.HandleFunc("/contacts",func(q http.ResponseWriter,r *http.Request) {
-		var c contact.Contact
-		err := json.NewDecoder(r.Body).Decode(&c)
-		if err != nil {
-			fmt.Println(err)
+	contacts := []contact.Contact{}
+	http.HandleFunc("/contacts", func(q http.ResponseWriter, r *http.Request) {
+		if r.Method == "POST" {
+			var c contact.Contact
+			err := json.NewDecoder(r.Body).Decode(&c)
+			if err != nil {
+				fmt.Println(err)
+			}
+			contacts = append(contacts, c)
+			fmt.Println(contacts)
+		} else {
+			fmt.Println("Get Method")
 		}
-		fmt.Println(c)
-		})
-	http.ListenAndServe(":3000",nil)
+	})
+	http.ListenAndServe(":3000", nil)
 }
