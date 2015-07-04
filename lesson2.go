@@ -11,10 +11,14 @@ type Contact struct {
 	Tel string
 }
 
+// funct name (input arugment) return type
+func say(c Contact) string {
+	return fmt.Sprintf("Hello %s",c.Name)
+}
+
 func main() {
-	contact := &Contact {
+	contact := Contact {
 		Name:"wingyplus",
 	}
-	contact.Tel = "telephone"
-	fmt.Println(contact.Tel);
+	fmt.Println(say(contact));
 }
