@@ -7,8 +7,10 @@ import "fmt"
 func main() {
 // var [name] [type] = value
 // s: value
-	var arr [5]int =  [5]int{1,2,3,4}
-	for _, v:= range arr {
-		fmt.Println(v)
+	// var m map[type key] type var
+	var m map[string]string = map[string]string{
+		"hello":"world",
+		"hello2":"world",
 	}
+	fmt.Println(m)
 }
