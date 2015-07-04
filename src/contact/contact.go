@@ -3,7 +3,7 @@ package contact
 import "fmt"
 
 type Contact struct {
-	Name string
+	Name string `json:"name"`
 	Tel string
 	Email string
 }

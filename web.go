@@ -12,7 +12,7 @@ func main() {
 	http.ListenAndServe(":3000", nil)
 }
 
-func addressBookHandler(q http.ResponseWriter, r *http.Request) {
+func addressBookHandler(w http.ResponseWriter, r *http.Request) {
 	contacts := []contact.Contact{}
 	if r.Method == "POST" {
 			var c contact.Contact
@@ -22,5 +22,13 @@ func addressBookHandler(q http.ResponseWriter, r *http.Request) {
 			}
 			contacts = append(contacts, c)
 			fmt.Println(contacts)
+		} else if r.Method == "GET" {
+			name := r.URL.Query().Get("name")
+			for _,c := range contacts {
+				if c.Name == name {
+					json.NewEncoder(w).Encode(c)
+					break
+				}
+			}
 		}
 }
