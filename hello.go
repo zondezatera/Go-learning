@@ -14,4 +14,6 @@ func main() {
 	}
 	m["wingyplus"] = "maxbeef"
 	fmt.Println(m)
+	delete(m,"hello2")
+	fmt.Println(m)
 }
