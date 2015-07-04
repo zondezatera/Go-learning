@@ -2,9 +2,17 @@
 package main
 import "fmt"
 
+// Class contact {
+//  private String name;
+// }
+
+type Contact struct {
+	Name string
+}
+
 func main() {
-	var a int = 0
-	var n*int = &a
-	*n = 1
-	fmt.Println(a)
+	contact := Contact {
+		Name:"wingyplus",
+	}
+	fmt.Println(contact);
 }
