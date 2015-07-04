@@ -10,5 +10,5 @@ func main() {
 	var s string =  "hello Golang"
 	var b = s[0:5]
 	// first letter uppercase meaning public var
-	fmt.Println(b)
+	fmt.Println(len(b))
 }
