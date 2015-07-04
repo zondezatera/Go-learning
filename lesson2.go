@@ -14,5 +14,5 @@ func main() {
 	contact := Contact {
 		Name:"wingyplus",
 	}
-	fmt.Println(contact);
+	fmt.Println(contact.Name);
 }
