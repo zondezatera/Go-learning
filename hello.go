@@ -12,8 +12,7 @@ func main() {
 		"hello":"world",
 		"hello2":"world",
 	}
-	m["wingyplus"] = "maxbeef"
-	fmt.Println(m)
-	delete(m,"hello2")
-	fmt.Println(m)
+	for k,v := range m {
+		fmt.Println(k,v)
+	}
 }
