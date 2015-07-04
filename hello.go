@@ -7,8 +7,8 @@ import "fmt"
 func main() {
 // var [name] [type] = value
 // s: value
-	var arr [5]int = [5]int{1,2,3,4,5}
-	var b = arr[0:2]
+	var s string =  "hello Golang"
+	var b = s[0:5]
 	// first letter uppercase meaning public var
 	fmt.Println(b)
 }
