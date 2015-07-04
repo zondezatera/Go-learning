@@ -7,8 +7,7 @@ import "fmt"
 func main() {
 // var [name] [type] = value
 // s: value
-	var a float32 = 1.23 
-	var b int = 1.23 
+	var b [5]int = [5]int{1,2,3,4,5} 
 	// first letter uppercase meaning public var
-	fmt.Println(s)
+	fmt.Println(b)
 }
