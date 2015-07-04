@@ -4,7 +4,8 @@ package main
 import "fmt"
 // func == function
 // core function 
-func main() {
+func main()
+{
 // var [name] [type] = value
 // s: value
 	s:= []byte("Hello Golang")
