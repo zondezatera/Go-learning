@@ -16,6 +16,12 @@ func main() {
 		switch k {
 			case "hello":
 				fmt.Println("Hello Gopher")
+				fallthrough
+			case "hello2":
+				fmt.Println("Hello")
+				fallthrough
+			default:
+				fmt.Println("Default")
 		}
 		fmt.Println(k,v)
 	}
