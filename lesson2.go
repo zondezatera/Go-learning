@@ -3,16 +3,18 @@ package main
 import "fmt"
 
 // Class contact {
-//  private String name;
+//  public String name;
 // }
 
 type Contact struct {
 	Name string
+	Tel string
 }
 
 func main() {
-	contact := Contact {
+	contact := &Contact {
 		Name:"wingyplus",
 	}
-	fmt.Println(contact.Name);
+	contact.Tel = "telephone"
+	fmt.Println(contact.Tel);
 }
