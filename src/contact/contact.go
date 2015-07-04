@@ -4,8 +4,8 @@ import "fmt"
 
 type Contact struct {
 	Name string `json:"name"`
-	Tel string
-	Email string
+	Tel string `json:"tel"`
+	Email string `json:"email"`
 }
 
 func Say(c Contact) string {

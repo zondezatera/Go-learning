@@ -7,13 +7,14 @@ import (
 	"net/http"
 )
 
+var contacts = []contact.Contact{}
+
 func main() {
 	http.HandleFunc("/contacts", addressBookHandler)
 	http.ListenAndServe(":3000", nil)
 }
 
 func addressBookHandler(w http.ResponseWriter, r *http.Request) {
-	contacts := []contact.Contact{}
 	if r.Method == "POST" {
 			var c contact.Contact
 			err := json.NewDecoder(r.Body).Decode(&c)
@@ -30,5 +31,6 @@ func addressBookHandler(w http.ResponseWriter, r *http.Request) {
 					break
 				}
 			}
+			w.WriteHeader(http.StatusNotFound)
 		}
 }
