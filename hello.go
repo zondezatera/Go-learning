@@ -7,7 +7,7 @@ import "fmt"
 func main() {
 // var [name] [type] = value
 // s: value
-	s:= 1
+	s:= []byte("Hello Golang")
 	// first letter uppercase meaning public var
 	fmt.Println(s)
 }
