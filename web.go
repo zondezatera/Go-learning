@@ -8,9 +8,13 @@ import (
 )
 
 func main() {
+	http.HandleFunc("/contacts", addressBookHandler)
+	http.ListenAndServe(":3000", nil)
+}
+
+func addressBookHandler(q http.ResponseWriter, r *http.Request) {
 	contacts := []contact.Contact{}
-	http.HandleFunc("/contacts", func(q http.ResponseWriter, r *http.Request) {
-		if r.Method == "POST" {
+	if r.Method == "POST" {
 			var c contact.Contact
 			err := json.NewDecoder(r.Body).Decode(&c)
 			if err != nil {
@@ -18,9 +22,5 @@ func main() {
 			}
 			contacts = append(contacts, c)
 			fmt.Println(contacts)
-		} else {
-			fmt.Println("Get Method")
 		}
-	})
-	http.ListenAndServe(":3000", nil)
 }
