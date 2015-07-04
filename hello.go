@@ -13,6 +13,9 @@ func main() {
 		"hello2":"world",
 	}
 	for k,v := range m {
+		if k == "hello" {
+			fmt.Println("Hello Gopher")
+		}
 		fmt.Println(k,v)
 	}
 }
