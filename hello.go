@@ -13,11 +13,11 @@ func main() {
 		"hello2":"world",
 	}
 	for k,v := range m {
-		switch k {
-			case "hello":
+		switch {
+			case k == "hello":
 				fmt.Println("Hello Gopher")
 				fallthrough
-			case "hello2":
+			case k == "hello2":
 				fmt.Println("Hello")
 				fallthrough
 			default:
