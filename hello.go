@@ -8,9 +8,10 @@ func main() {
 // var [name] [type] = value
 // s: value
 	// var m map[type key] type var
-	var m map[string]string = map[string]string{
+	m := map[string]string{
 		"hello":"world",
 		"hello2":"world",
 	}
+	m["wingyplus"] = "maxbeef"
 	fmt.Println(m)
 }
