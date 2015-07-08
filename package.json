@@ -1,0 +1,27 @@
+{
+  "name": "go-learning",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zondezatera/Go-learning.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zondezatera/Go-learning/issues"
+  },
+  "homepage": "https://github.com/zondezatera/Go-learning",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-go": "^1.1.0",
+    "gulp-install": "^0.4.0"
+  },
+  "devDependencies": {
+    "gulp-bower": "0.0.10"
+  }
+}
